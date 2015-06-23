@@ -13,6 +13,7 @@
 @property (strong, nonatomic) UIImageView *imageView1;
 @property (strong, nonatomic) UIImageView *imageView2;
 @property (strong, nonatomic) UIImageView *imageView3;
+@property (strong, nonatomic) UIImage *tappedImage;
 
 - (void) viewDidAppear:(BOOL)animated;
 

@@ -15,5 +15,17 @@
 @property (strong, nonatomic) UIImageView *imageView3;
 
 - (UIImageView *)viewForZoomingInScrollView:(UIScrollView *)scrollView;
+@property (strong, nonatomic) UIImage *currentImage;
+
+
+
+
+
+@property (nonatomic, strong) UIImageView *finalImageView;
+@property (nonatomic, strong) UIImage *finalImage;
+@property (nonatomic, strong) UIScrollView *scrollView;
+
+
+
 
 @end

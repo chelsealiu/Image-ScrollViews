@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -16,24 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xIB-iH-dtS">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" minimumZoomScale="0.0" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="xIB-iH-dtS">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="zFz-AW-8zX"/>
                                     <outletCollection property="gestureRecognizers" destination="xCF-rt-V2g" appends="YES" id="uTb-bt-2iJ"/>
                                 </connections>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lEp-CT-TPN">
+                                <rect key="frame" x="140" y="439" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="1" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.60712540380000002" blue="0.81454401249999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="lEp-CT-TPN" secondAttribute="centerX" id="75P-xv-Sgn"/>
                             <constraint firstItem="xIB-iH-dtS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="B5E-zj-PaT"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="xIB-iH-dtS" secondAttribute="bottom" id="CLA-Yn-K2q"/>
                             <constraint firstAttribute="trailing" secondItem="xIB-iH-dtS" secondAttribute="trailing" id="FV3-3s-Bhn"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="lEp-CT-TPN" secondAttribute="bottom" constant="60" id="S7y-bg-KBR"/>
                             <constraint firstItem="xIB-iH-dtS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="tte-BF-tX3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PV4-BS-bAo"/>
                     <connections>
+                        <outlet property="pageScroll" destination="lEp-CT-TPN" id="jjt-dB-mK5"/>
                         <outlet property="scrollView" destination="xIB-iH-dtS" id="UPg-uh-T72"/>
                         <segue destination="vUN-b1-Qho" kind="push" identifier="detailSegue" id="f0f-Ua-V6N"/>
                     </connections>
@@ -59,27 +67,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ah9-Er-WLN">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" minimumZoomScale="0.20000000000000001" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ah9-Er-WLN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="73E-rt-kv0">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="320" id="4vR-Kl-Npo"/>
-                                            <constraint firstAttribute="height" constant="568" id="eBR-kP-3bp"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="73E-rt-kv0" firstAttribute="top" secondItem="Ah9-Er-WLN" secondAttribute="top" id="3pP-aN-eJD"/>
-                                    <constraint firstAttribute="trailing" secondItem="73E-rt-kv0" secondAttribute="trailing" id="E1x-mV-ECJ"/>
-                                    <constraint firstItem="73E-rt-kv0" firstAttribute="top" secondItem="Ah9-Er-WLN" secondAttribute="top" id="OrH-LW-NPY"/>
-                                    <constraint firstItem="73E-rt-kv0" firstAttribute="leading" secondItem="Ah9-Er-WLN" secondAttribute="leading" id="fqn-F3-xuo"/>
-                                    <constraint firstAttribute="bottom" secondItem="73E-rt-kv0" secondAttribute="bottom" id="g4k-UE-6nn"/>
-                                    <constraint firstAttribute="trailing" secondItem="73E-rt-kv0" secondAttribute="trailing" id="leX-dk-K0X"/>
-                                    <constraint firstItem="73E-rt-kv0" firstAttribute="leading" secondItem="Ah9-Er-WLN" secondAttribute="leading" id="u2S-i2-FyU"/>
-                                    <constraint firstAttribute="bottom" secondItem="73E-rt-kv0" secondAttribute="bottom" id="zBv-8z-DxK"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="vUN-b1-Qho" id="baZ-dg-P1K"/>
                                 </connections>

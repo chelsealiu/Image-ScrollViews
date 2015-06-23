@@ -7,56 +7,57 @@
 //
 
 #import "NewViewController.h"
+#import "ViewController.h"
 
 @interface NewViewController ()
 
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-
-@property (strong, nonatomic) UIImageView *currentImage;
-
+@property (nonatomic, strong) UIImageView *tempImageView;
 
 @end
 
 
 @implementation NewViewController
 
+-(void) viewDidLoad {
 
-
--(void) viewDidAppear:(BOOL)animated {
+    [super viewDidLoad];
     
     self.scrollView.delegate = self;
+    self.scrollView.userInteractionEnabled = YES;
     
-    self.imageView1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lighthouse-in-Field.jpg"]];
-    self.imageView2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lighthouse.jpg"]];
-    self.imageView3 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lighthouse-night.jpg"]];
- 
- 
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:(CGRect){xPosition,0,self.scrollView.frame.size.width, self.scrollView.frame.size.height}];
-//        imageView.image = image;
-    
-        [self.scrollView addSubview:imageView];
-    
-//    self.scrollView.contentSize = (CGSize){xPosition, self.scrollView.frame.size.height};
-    [self viewForZoomingInScrollView:self.scrollView];
-}
 
+    
+
+    self.tempImageView = [[UIImageView alloc] initWithImage:self.finalImage];
+
+    
+    [self.scrollView addSubview: self.tempImageView];
+    
+
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.tempImageView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.scrollView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0]];
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.tempImageView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.scrollView attribute:NSLayoutAttributeRight multiplier:1.0 constant:0]];
+    
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.tempImageView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.scrollView attribute:NSLayoutAttributeTop multiplier:1.0 constant:0]];
+    
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.tempImageView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.scrollView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0]];
+    
+    self.finalImageView.contentMode = UIViewContentModeScaleAspectFit;
+
+//    self.finalImageView.image = self.finalImage;
+    
+    [self viewForZoomingInScrollView:self.scrollView];
+
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-
 - (UIImageView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return [self.scrollView.subviews firstObject];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NewViewController *detailVC = [segue destinationViewController];
-    
-    detailVC.currentImage = self.imageView1;
-    
-    
-}
 
 
 
