@@ -14,6 +14,13 @@
 		5EA51B801B399A820055279A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EA51B7F1B399A820055279A /* Images.xcassets */; };
 		5EA51B831B399A820055279A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA51B811B399A820055279A /* LaunchScreen.xib */; };
 		5EA51B8F1B399A830055279A /* Image_Scroll_ViewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA51B8E1B399A830055279A /* Image_Scroll_ViewsTests.m */; };
+		5EA51B9B1B39A6660055279A /* tokyo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA51B981B39A6650055279A /* tokyo.png */; };
+		5EA51B9C1B39A6660055279A /* newyork.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA51B991B39A6660055279A /* newyork.png */; };
+		5EA51B9D1B39A6660055279A /* shanghai.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA51B9A1B39A6660055279A /* shanghai.png */; };
+		5EA51B9F1B39AE910055279A /* Lighthouse-in-Field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EA51B9E1B39AE910055279A /* Lighthouse-in-Field.jpg */; };
+		5EA51BA11B39AE9A0055279A /* Lighthouse-night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EA51BA01B39AE9A0055279A /* Lighthouse-night.jpg */; };
+		5EA51BA31B39AEA10055279A /* Lighthouse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EA51BA21B39AEA10055279A /* Lighthouse.jpg */; };
+		5EA51BAC1B39CE0A0055279A /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA51BAB1B39CE0A0055279A /* NewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,14 @@
 		5EA51B881B399A830055279A /* Image Scroll ViewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Image Scroll ViewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA51B8D1B399A830055279A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EA51B8E1B399A830055279A /* Image_Scroll_ViewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Image_Scroll_ViewsTests.m; sourceTree = "<group>"; };
+		5EA51B981B39A6650055279A /* tokyo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tokyo.png; sourceTree = "<group>"; };
+		5EA51B991B39A6660055279A /* newyork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newyork.png; sourceTree = "<group>"; };
+		5EA51B9A1B39A6660055279A /* shanghai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shanghai.png; sourceTree = "<group>"; };
+		5EA51B9E1B39AE910055279A /* Lighthouse-in-Field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lighthouse-in-Field.jpg"; sourceTree = "<group>"; };
+		5EA51BA01B39AE9A0055279A /* Lighthouse-night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lighthouse-night.jpg"; sourceTree = "<group>"; };
+		5EA51BA21B39AEA10055279A /* Lighthouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lighthouse.jpg; sourceTree = "<group>"; };
+		5EA51BAA1B39CE0A0055279A /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		5EA51BAB1B39CE0A0055279A /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +100,17 @@
 				5EA51B771B399A820055279A /* AppDelegate.m */,
 				5EA51B791B399A820055279A /* ViewController.h */,
 				5EA51B7A1B399A820055279A /* ViewController.m */,
+				5EA51BAA1B39CE0A0055279A /* NewViewController.h */,
+				5EA51BAB1B39CE0A0055279A /* NewViewController.m */,
 				5EA51B7C1B399A820055279A /* Main.storyboard */,
 				5EA51B7F1B399A820055279A /* Images.xcassets */,
 				5EA51B811B399A820055279A /* LaunchScreen.xib */,
+				5EA51B981B39A6650055279A /* tokyo.png */,
+				5EA51B991B39A6660055279A /* newyork.png */,
+				5EA51B9A1B39A6660055279A /* shanghai.png */,
+				5EA51B9E1B39AE910055279A /* Lighthouse-in-Field.jpg */,
+				5EA51BA21B39AEA10055279A /* Lighthouse.jpg */,
+				5EA51BA01B39AE9A0055279A /* Lighthouse-night.jpg */,
 				5EA51B721B399A820055279A /* Supporting Files */,
 			);
 			path = "Image Scroll Views";
@@ -199,9 +222,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA51B9C1B39A6660055279A /* newyork.png in Resources */,
 				5EA51B7E1B399A820055279A /* Main.storyboard in Resources */,
+				5EA51B9D1B39A6660055279A /* shanghai.png in Resources */,
+				5EA51BA31B39AEA10055279A /* Lighthouse.jpg in Resources */,
 				5EA51B831B399A820055279A /* LaunchScreen.xib in Resources */,
+				5EA51B9B1B39A6660055279A /* tokyo.png in Resources */,
 				5EA51B801B399A820055279A /* Images.xcassets in Resources */,
+				5EA51BA11B39AE9A0055279A /* Lighthouse-night.jpg in Resources */,
+				5EA51B9F1B39AE910055279A /* Lighthouse-in-Field.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +251,7 @@
 				5EA51B7B1B399A820055279A /* ViewController.m in Sources */,
 				5EA51B781B399A820055279A /* AppDelegate.m in Sources */,
 				5EA51B751B399A820055279A /* main.m in Sources */,
+				5EA51BAC1B39CE0A0055279A /* NewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
